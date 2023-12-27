@@ -1,0 +1,257 @@
+/* Define the glow class */
+.glow {
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8)); /* Adjust the parameters for a larger glow */
+  animation: glowAnimation 3s infinite alternate; /* Adjust the animation duration as needed */
+}
+
+/* Define the animation for the glow */
+@keyframes glowAnimation {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5)); /* Adjust the parameters for a softer fade */
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .glow {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6)); /* Adjust parameters for smaller screens */
+  }
+}
+
+/* Media query for even smaller screens, if needed */
+@media (max-width: 480px) {
+  .glow {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.4)); /* Further adjust parameters for smaller screens */
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Base styles */
+.navbar {
+  @apply flex items-center justify-between px-4 py-2;
+}
+
+.logo {
+  @apply w-10 h-10 mr-4;
+}
+
+.nav-links {
+  @apply space-x-4;
+}
+
+.nav-link {
+  @apply inline-block hover:text-gray-100;
+}
+
+.login-button {
+  @apply inline-block bg-gray-800 text-gray-100 hover:bg-gray-700 px-4 py-2 rounded-full;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    @apply hidden;
+  }
+}
+
+/* Add this to your stylesheet or in a style tag in the document head */
+/* Hide scrollbar in general */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Optional: handle Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 0em;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Make scrollbar thumb visible on hover in the first section (w-1/5) */
+.group:hover ::-webkit-scrollbar-thumb {
+  background-color: #4f4f4f;
+}
+
+/* Make scrollbar track visible on hover in the first section (w-1/5) - optional */
+.group:hover ::-webkit-scrollbar-track {
+  background-color: #eaeaea;
+}
+
+
+#main {
+  margin-top: 69px; /* Adjust this value to match your navbar height */
+}
+
+#topic1 h2 {
+  font-size: 2.6rem; /* Adjust the font size as needed */
+  font-family: 'Afacad', sans-serif;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+#topic2 h2 {
+  font-size: 1.6rem; /* Adjust the font size as needed */
+  font-family: 'Afacad', sans-serif;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+#ntext {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 25px;
+}
+
+#ptext {
+  font-family: 'Roboto', sans-serif;
+}
+
+#space {
+  margin-bottom: 25px;
+}
+
+.chapter, .topic-list .topic, .topic-list .topic:hover::before {
+  color: #ffffff; /* Set the color to match your chapter color */
+}
+
+.topic-list .topic {
+  position: relative;
+  list-style-type: none; /* Remove default list styles */
+}
+
+.topic-list .topic:hover::before {
+  content: '\2022'; /* Unicode character for a bullet point */
+  position: absolute;
+  left: -15px; /* Adjust the positioning to your preference */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em; /* Adjust the font size as needed */
+}
+
+.independent-scroll {
+  max-height: calc(100vh - 2rem); /* Adjust the max height as needed */
+  overflow-y: auto;
+  position: sticky;
+  top: 2rem; /* Adjust the top value to set the sticky position */
+}
+
+
+.topic-list .topic a {
+  color: #808080; /* Grey color */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Add this to your Tailwind CSS or stylesheet */
+.active-chapter {
+  color: white;
+}
+
+.active-topic {
+  color: white;
+}
+
+/* Optional: Add hover styles for links in Section 1 */
+#chapterList a:hover {
+  color: #ffffff; /* Change this to your desired hover color */
+}
+
+/* Optional: Add hover styles for links in Section 2 */
+#topicList1 a:hover {
+  color: #ffffff; /* Change this to your desired hover color */
+}
+
+.less-dist {
+  line-height: 0.47cm;
+}
+
+.text-typing {
+  font-family: 'Courier New', monospace;
+  font-size: 24px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  animation: typing 1s steps(1000) forwards;
+ }
+
+.typing-animate {
+  animation: typing 1s steps(1000) forwards; /* Adjust the duration and steps as needed */
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.loading {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #3498db; /* Adjust color as needed */
+  animation: spin 1s linear infinite, fadeIn 1s ease-in-out;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.AIsummary {
+  display: flex;
+  align-items: center; /* Vertically align items */
+}
+ 
+.AIgif {
+  height: auto; /* Maintain the aspect ratio */
+  margin-right: 2px; /* Adjust the spacing between the GIF and text */
+}
+
+#AItext {
+  font-size: 2rem; /* Adjust the font size as needed */
+  font-family: 'Afacad', sans-serif;
+}
