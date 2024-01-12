@@ -6,12 +6,12 @@ const ModiN1 = () => {
     return (
         <>
         <Navigation />
-        <div class="mt-4">
-        < div class="flex" id='main' >    
+        <div class="mt-32">
+        <div class="flex flex-col lg:flex-row" id='main'>     
             {/*Making the 1/5 first section*/}
-            < div class="w-1/5 p-4 overflow-hidden relative" >
+            <div class="lg:w-1/5 md:w-1/2 w-full p-4 overflow-hidden relative">
                 <div class="overflow-y-auto scrollbar-thin scrollbar-thumb-rounded-full scrollbar-thumb-gray-500 scrollbar-track-transparent transition duration-300 group-hover:scrollbar-thumb-gray-700 group-hover:scrollbar-track-gray-100">
-                    <p class="text-white text-lg mb-4 mt-16 font-bold tracking-wide">On this page</p>
+                    <p class="text-white text-lg mb-4 font-bold tracking-wide">On this page</p>
                     <ul class="mb-4" id="chapterList">
                         <li class="mb-2 text-gray-600"><a href="#chapters" class="flex items-center"><span class="mr-2 opacity-0 transition duration-300">&#8226;</span>Chapters</a></li>
                         <ul class="ml-5" id="topicList1">
@@ -24,11 +24,11 @@ const ModiN1 = () => {
             </div >
 
             {/*Makeing Middle or the 3/5 section contain most text*/}
-            < div class="w-3/5 p-4 overflow-y-auto hover-scrollbar" style={{ height: '100vh', overflowX: 'hidden' }}>
+            <div class="lg:w-3/5 md:w-1/2 w-full p-4 overflow-y-auto hover-scrollbar" style={{ height: '100vh', overflowX: 'hidden' }}>
                 {/*Creating Introduction Section*/}
                 < section id="topic1" class="overflow-y-auto" >
                     <h2 class=" linked-heading group flex items-center mb-0" data-id="introduction">
-                        <a class="mt-14 text-white tap-highlight-transparent outline-none data-[focus-visible=true]:1-10 data-[focus-visible=true]:outline-2 data-[focus-visible-true]routline-focus data-focus-visible-true]:outline-offset-2 text-medium no-underline hover:opacity-80 active:opacity-disabled transition-opacity relative w-fit flex items-center gap-1 group text-inherit">
+                        <a class="text-white tap-highlight-transparent outline-none data-[focus-visible=true]:1-10 data-[focus-visible=true]:outline-2 data-[focus-visible-true]routline-focus data-focus-visible-true]:outline-offset-2 text-medium no-underline hover:opacity-80 active:opacity-disabled transition-opacity relative w-fit flex items-center gap-1 group text-inherit">
                             Introduction
                         </a>
                     </h2>
@@ -136,8 +136,8 @@ const ModiN1 = () => {
                 </section>
             </div >
 
-            <div class="container w-1/5 p-4 overflow-y-auto">
-                <div class="AIsummary mt-14 text-white">
+            <div class="container lg:w-1/5 md:w-full w-full p-4 overflow-y-auto">
+                <div class="AIsummary text-white">
                     <img style={{ height: '2.125rem' }} class="AIgif" src="https://www.gstatic.com/lamda/images/sparkle_resting_v2_darkmode_2bdb7df2724e450073ede.gif" />
                     <h2 id="AItext" class="linked-heading group flex items-center mb-0">
                         <a href="#" data-focus-visible="true" data-focus-visible-true="outline-offset-2" data-hover="opacity-80" data-active="opacity-disabled" data-tap-highlight-transparent="true" data-outline="none" data-1="1-10" data-2="outline-2" class="text-1.8xl no-underline hover:opacity-80 active:opacity-disabled transition-opacity relative w-fit flex items-center gap-1 group text-inherit">
