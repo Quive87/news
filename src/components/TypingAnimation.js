@@ -36,7 +36,7 @@ const TypingAnimation = () => {
       {isLoading ? (
         <div className="loading"></div>
       ) : (
-        <p class="text-gray-500" className={`text-gray-500 text-lg font-medium ${'typing-animate'}`}>{content}</p>
+        <p class="text-gray-500" className={`text-gray-500 text-sm font-medium ${'typing-animate'}`}>{content}</p>
       )}
     </div>
   );
