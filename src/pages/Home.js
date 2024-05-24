@@ -5,7 +5,7 @@ import '../components/Home.css'
 const Home = () => {
   const ada3LogoUrl = 'https://quive87.github.io/gg/pro/adapare.png';
   const exhibitionLogoUrl = 'https://www.dpsranchi.com/img/logo.png';
-
+  const newurl = 'https://dpsranchi.pages.dev/';
   return (
     <>
     <Navigation />
@@ -35,9 +35,11 @@ const Home = () => {
           captivate and inspire.
         </p>
         <div className="mt-6">
-          <button href="https://dpsranchi.pages.dev/" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
-            Explore Exhibitions
+          <a href="{newurl}">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
+            Explore Projects
           </button>
+            </a>
         </div>
       </div>
     </div></>
